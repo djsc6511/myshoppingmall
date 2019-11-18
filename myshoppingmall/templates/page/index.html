@@ -1,7 +1,121 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content%}
-<h1>
-    home
-</h1>
+<section id="showcase">
+    <div class="container text-center">
+      <div class="home-search p-5">
+        <div class="overlay p-5">
+          <h1 class="display-4 mb-4">
+            Welcome to goorm shopping mall!
+          </h1>
+          <p class="lead">What do you want?</p>
+          <div class="search">
+            <form action="search.html">
+              <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                  <label class="sr-only">State</label>
+                  <select name="state" class="form-control">
+                    <option selected="true" disabled="disabled">Woman</option>
+                    <option value="AL">Man</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label class="sr-only">Type</label>
+                  <select name="bedrooms" class="form-control">
+                    <option selected="true" disabled="disabled">Type (All)</option>
+                    <option value="1">Shirts</option>
+                    <option value="2">Pants</option>
+                    <option value="3">Accessories</option>
+                    <option value="4">Shoes</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <select name="price" class="form-control" id="type">
+                    <option selected="true" disabled="disabled">Max Price</option>
+                    <option value="5000">5,000￦</option>
+                    <option value="10000">10,000￦</option>
+                    <option value="15000">15,000￦</option>
+                    <option value="20000">20,000￦</option>
+                    <option value="25000">25,000￦</option>
+                    <option value="30000">30,000￦￦</option>
+                    <option value="35000">35,000￦</option>
+                    <option value="40000">40,000￦+</option>
+                  </select>
+                </div>
+              </div>
+              <button class="btn btn-secondary btn-block mt-4" type="submit">Search product</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Listings -->
+  <section id="listings" class="py-5">
+    <div class="container">
+      <h3 class="text-center mb-3">Product Lists</h3>
+        <div class="card-group">
+            <div class="card">
+                <img src="{% static 'img/shirt_001.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Green t-shirt</h5>
+                    <p class="card-text text-center">Price 20,000￦</p>
+                    <p class="buttons text-center">
+                        <a href="detail.html" class="btn btn-default">View detail</a>
+                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/shirt_001.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Green t-shirt</h5>
+                    <p class="card-text text-center">Price 20,000￦</p>
+                    <p class="buttons text-center">
+                        <a href="detail.html" class="btn btn-default">View detail</a>
+                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="{% static 'img/shirt_001.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title text-center">Green t-shirt</h5>
+                    <p class="card-text text-center">Price 20,000￦</p>
+                    <p class="buttons text-center">
+                        <a href="detail.html" class="btn btn-default">View detail</a>
+                        <a href="basket.html" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-5 bg-secondary text-white">
+    <div class="container">
+      <div class="row text-center">
+        <div class="col-md-4">
+          <i class="fas fa-comment fa-4x mr-4"></i>
+          <hr>
+          <h3>WE LOVE OUR CUSTOMERS</h3>
+          <p>We are known to provide best possible service ever.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-home fa-4x mr-4"></i>
+          <hr>
+          <h3>BEST PRICES</h3>
+          <p>You can check that the height of the boxes adjust when longer text like this one is used in one of them.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="fas fa-suitcase fa-4x mr-4"></i>
+          <hr>
+          <h3>100% SATISFACTION GUARANTEED</h3>
+          <p>Free returns on everything for 3 months.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 {% endblock %}

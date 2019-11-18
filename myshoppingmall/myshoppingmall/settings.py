@@ -25,12 +25,13 @@ SECRET_KEY = 'j6c$dmd=us^w_8i^a-6t&sh4+1)fi=0ebeg37zdz(rgo=be)xr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [".goorm.io"]
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'page.apps.PageConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
